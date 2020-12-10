@@ -1,0 +1,22 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-order-service
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      #      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  # 集群版
+
+ribbon:
+  # 指的是建立连接所用的时间，即网络连接正常时两端连接的所用时间
+  ReadTimeout: 5000
+# 指的是建立连接之后从服务端读取资源所用的时间
+  ConnectTimeout: 5000
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    com.study.springcloud.service.PaymentFeignService: debug
