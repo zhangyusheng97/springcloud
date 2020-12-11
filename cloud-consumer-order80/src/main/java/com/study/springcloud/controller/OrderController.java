@@ -57,4 +57,10 @@ public class OrderController {
         ServiceInstance instance = myLB.instances(instances);
         return restTemplate.getForObject(instance.getUri() + "/payment/lx",String.class);
     }
+    //======================zipkin演示==============================
+    @ResponseBody
+    @RequestMapping("/consumer/payment/zipkin")
+    public String testZipkin(){
+        return restTemplate.getForObject(PAYMENT_URL+"/payment/zipkin",String.class);
+    }
 }

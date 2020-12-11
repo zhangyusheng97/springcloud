@@ -76,4 +76,9 @@ public class PaymentController {
         return serverPort;
     }
 
+    @ResponseBody
+    @RequestMapping("/payment/zipkin")
+    public String paymentZipkin(){
+        return "这是一个zipkin的测试";
+    }
 }
