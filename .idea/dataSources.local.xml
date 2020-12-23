@@ -11,7 +11,13 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="cloud2020" />
+          <node kind="schema">
+            <name qname="cloud2020" />
+            <name qname="seata" />
+            <name qname="seata_account" />
+            <name qname="seata_order" />
+            <name qname="seata_storage" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>
